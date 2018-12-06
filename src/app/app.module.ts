@@ -12,6 +12,11 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { routing } from './app.routing.ts';
 import { QuizComponent } from './quiz/quiz.component';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
+
 @NgModule({
   imports: [BrowserModule, FormsModule, NgDragDropModule.forRoot(), CommonModule, ReactiveFormsModule, routing],
   declarations: [AppComponent, LoginComponent, HomeComponent, NotfoundComponent, QuizComponent],
