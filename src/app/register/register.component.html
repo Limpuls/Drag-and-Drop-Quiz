@@ -1,5 +1,5 @@
 <div class="container">
-<form [formGroup]="form" (ngSubmit)="login()">
+<form [formGroup]="form" (ngSubmit)="signInWithEmail()">
     <div class="form-group">
        <label for="email">Email</label>
      	<input type="email" class="form-control" formControlName="email">
@@ -27,6 +27,7 @@ class="alert alert-danger">
     </div>
 </div>
 
-    <button class="btn btn-primary" type="submit">Login</button>
+    <button class="btn btn-primary" type="submit">Register</button>
+
 </form>
 </div>
