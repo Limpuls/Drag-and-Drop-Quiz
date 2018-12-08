@@ -5,7 +5,11 @@ import { PasswordValidator } from './passwordValidator';
 import { LoginService } from './login.service';
 import { AuthService } from '../services/auth.service';
 var firebase = require('firebase');
-import * as firebase from 'firebase'
+
+
+
+
+
 @Component({
     selector:'login',
     templateUrl: 'login.component.html'
@@ -22,8 +26,6 @@ export class LoginComponent  {
 PasswordValidator.cannotContainSpace])]
         })
 
-        email = this.form.controls['email'].value;
-        password = this.form.controls['password'].value;
     }
 
     login(){
@@ -37,12 +39,11 @@ PasswordValidator.cannotContainSpace])]
         } else {
           console.log("success");
         }*/
-          this.auth.logUserIn(email, password).then((res) => {
-          console.log(res);
-          //this.router.navigate(['dashboard']);
-        })
-        .catch((err) => console.log('error: ' + err));
-    }
+          this.auth.logUserIn(this.form.value.email, this.form.value.password);
 
 
+};
+/*isLoggedIn() {
+    return this.auth.isLoggedIn();
+}*/
 }
