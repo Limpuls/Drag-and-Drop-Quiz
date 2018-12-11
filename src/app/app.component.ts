@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DropEvent } from 'ng-drag-drop';
 import { AuthService } from './services/auth.service';
-var firebase = require('firebase');
+//var firebase = require('firebase');
 
 @Component({
   selector: 'app-root',

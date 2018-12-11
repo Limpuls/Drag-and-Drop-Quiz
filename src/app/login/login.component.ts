@@ -4,7 +4,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PasswordValidator } from './passwordValidator';
 import { LoginService } from './login.service';
 import { AuthService } from '../services/auth.service';
-var firebase = require('firebase');
+//var firebase = require('firebase');
+
 
 
 

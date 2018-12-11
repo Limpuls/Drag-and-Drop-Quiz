@@ -1,11 +1,22 @@
-<div class="container">
+<section class="drag-game">
+<div class="container game">
 <div class="row">
   <div class="col-lg-12">
   <h1 class="score">Score: {{score}}</h1>
   </div>
   </div>
   <div class="row">
-    <div class="col-sm-3">
+        <div class="col-lg-5 col-md-4 col-sm-6 back-op">
+                Questions
+                  <div class="card card-outline-primary mb-3" droppable [dragOverClass]="'drag-target-border-green'" [dropScope]="'vegetable'"
+                      [dragHintClass]="'drag-hint'" (onDrop)="onVegetableDrop($event)">
+                      <div class="card-header card-inverse card-primary lead">{{questions[i]}}</div>
+                      <div class="card-block scroll-list">
+                          <li *ngFor="let item of droppedVegetables" class="list-group-item">{{item.name}}</li>
+                      </div>
+                  </div>
+              </div>
+    <div class="col-lg-5 col-md-4 col-sm-6 back-op">
         <div class="card card-outline-success mb-3">
             <div class="card-header card-inverse card-success">
                 Answers
@@ -75,18 +86,7 @@
         </div>
     </div>-->
 
-
-    <div class="col-sm-3">
-      Questions
-        <div class="card card-outline-primary mb-3" droppable [dragOverClass]="'drag-target-border-green'" [dropScope]="'vegetable'"
-            [dragHintClass]="'drag-hint'" (onDrop)="onVegetableDrop($event)">
-            <div class="card-header card-inverse card-primary lead">{{questions[i]}}</div>
-            <div class="card-block scroll-list">
-                <li *ngFor="let item of droppedVegetables" class="list-group-item">{{item.name}}</li>
-            </div>
-        </div>
-    </div>
-
+<!--
     <div class="col-sm-3">
         <div class="card card-outline-primary mb-3" droppable [dragOverClass]="'drag-target-border'" [dropScope]="['fruit', 'vegetable']"
             [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event)">
@@ -96,6 +96,7 @@
             </div>
         </div>
     </div>
-
+-->
 </div>
 </div>
+</section>

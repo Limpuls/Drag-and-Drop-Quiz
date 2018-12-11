@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DropEvent } from 'ng-drag-drop';
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',

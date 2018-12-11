@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PasswordValidator } from '../login/passwordValidator';
 import { AuthService } from '../services/auth.service';
-var firebase = require('firebase');
+//var firebase = require('firebase');
 
 @Component({
   selector: 'app-register',
