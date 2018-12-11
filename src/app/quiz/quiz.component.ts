@@ -12,7 +12,7 @@ export class QuizComponent  {
   //answers:string[] = [["vienas", "du"], ["keturi", "10"]];
   i:number = 0;
   score:number = 0;
-
+  indexes:any;
   vegetables = [[
   {name: 'Carrot', type: 'vegetable'},
   {name: 'Onion', type: 'vegetable'},
@@ -25,7 +25,7 @@ export class QuizComponent  {
   {name: 'Capsicumas', type: 'vegetable'}]]
 
 
-
+//hey
 
 
   fruits = [

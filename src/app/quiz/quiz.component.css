@@ -28,7 +28,7 @@ div.scroll-list {
   height: 50px;
 }
 .drag-game{
-  background-image: url(../src/assets/Quiz-Background.png);
+  background-image: url(../../assets/Quiz-Background.png);
   background-size: cover;
   min-height: calc(100vh - 80px);
   background-position: 50% 0%;
