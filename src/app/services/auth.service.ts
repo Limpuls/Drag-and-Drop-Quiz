@@ -25,7 +25,10 @@ export class AuthService {
         (user) => {
           if (user) {
             this.userDetails = user;
-
+            var email = this.userDetails.email;
+            console.log("hello im user" + " " + email);
+            this.setCurrentUser(email);
+            this.loggedIn = true;
             console.log(this.userDetails);
           } else {
             this.userDetails = null;
@@ -59,11 +62,10 @@ console.log("error" + error);
 //var user = firebase.auth().currentUser;
 //var email;
 if (this.userDetails) {
-email = this.userDetails.email;
+
 console.log("hello im user" + " " + email);
 //email = user.email;
-this.setCurrentUser(email);
- this.loggedIn = true;
+
 } else {
 console.log("not working");
 }
@@ -83,7 +85,6 @@ this.router.navigate(['']);
     }
 
     logOut() {
-      sessionStorage.removeItem('user');
       this.loggedIn = false;
       firebase.auth().signOut().then(function() {
         // Sign-out successful.
