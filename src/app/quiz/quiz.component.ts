@@ -1,11 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { DropEvent } from 'ng-drag-drop';
+import { AuthService } from '../services/auth.service';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Router } from '@angular/router';
+import { routing } from '../app.routing';
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent  {
+  user:any;
+  constructor(private _auth: AuthService, private _db: AngularFireDatabase, private router: Router) {
+    this.user = _auth.getCurrentUser();
+  }
 
   questions:string[] = ["what is nepal?", "what is nepal2?", "what is nepal3?"];
   correctAns:string[] = ["Carrot", "Onion", "Potato", "Capsicum"];
@@ -13,6 +22,7 @@ export class QuizComponent  {
   i:number = 0;
   score:number = 0;
   indexes:any;
+  finished:boolean;
   vegetables = [[
   {name: 'Carrot', type: 'vegetable'},
   {name: 'Onion', type: 'vegetable'},
@@ -20,9 +30,14 @@ export class QuizComponent  {
   {name: 'Capsicum', type: 'vegetable'}],
   [
   {name: 'Carrotas', type: 'vegetable'},
-  {name: 'Onionas', type: 'vegetable'},
+  {name: 'Onion', type: 'vegetable'},
   {name: 'Potatoas', type: 'vegetable'},
-  {name: 'Capsicumas', type: 'vegetable'}]]
+  {name: 'Capsicumas', type: 'vegetable'}],
+  [
+  {name: 'Carrotas2', type: 'vegetable'},
+  {name: 'Onionas2', type: 'vegetable'},
+  {name: 'Potatoas2', type: 'vegetable'},
+  {name: 'Capsicumas2', type: 'vegetable'}]]
 
 
 //hey
@@ -59,8 +74,15 @@ export class QuizComponent  {
          console.log(e.dragData);
     this.i++;
     console.log(this.i);
+    this._db.list("users").set(this._auth.userDetails.uid, {user: this.user, score: this.score});
 
       this.indexes = this.vegetables[this.i];
+      if(this.questions.length == this.i) {
+        console.log("done");
+        this.finished = true;
+        this.router.navigate(['/']);
+      }
+
   }
 
   onAnyDrop(e: DropEvent) {

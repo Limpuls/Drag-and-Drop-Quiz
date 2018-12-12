@@ -6,12 +6,15 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { LoginComponent } from './login/login.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { RegisterComponent } from './register/register.component';
-
+import { ScoreboardComponent } from './scoreboard/scoreboard.component';
+import { QuostionnaireComponent } from './quostionnaire/quostionnaire.component';
 
 export const routing = RouterModule.forRoot([
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'quiz', component: QuizComponent},
+  {path: 'scoreboard', component: ScoreboardComponent},
+  {path: 'questionnaire', component: QuostionnaireComponent},
   {path: '**', component: NotfoundComponent}
 ]);

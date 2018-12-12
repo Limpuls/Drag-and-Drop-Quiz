@@ -14,16 +14,20 @@ import { QuizComponent } from './quiz/quiz.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database'
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { RegisterComponent } from './register/register.component';
 import { AuthService } from './services/auth.service';
+import { ScoreboardComponent } from './scoreboard/scoreboard.component';
+import { QuostionnaireComponent } from './quostionnaire/quostionnaire.component';
+import { QuestionnaireService } from './quostionnaire/questionnaire.service';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, NgDragDropModule.forRoot(), CommonModule, ReactiveFormsModule, routing, AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule, AngularFireAuthModule],
-  declarations: [AppComponent, LoginComponent, HomeComponent, NotfoundComponent, QuizComponent, RegisterComponent],
+  imports: [BrowserModule, FormsModule, NgDragDropModule.forRoot(), CommonModule, ReactiveFormsModule, routing, AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule, AngularFireAuthModule, AngularFireDatabaseModule],
+  declarations: [AppComponent, LoginComponent, HomeComponent, NotfoundComponent, QuizComponent, RegisterComponent, ScoreboardComponent, QuostionnaireComponent],
   bootstrap: [AppComponent],
-  providers: [LoginService, AuthService],
+  providers: [LoginService, AuthService, QuestionnaireService],
   exports: [NgDragDropModule, CommonModule]
 })
 export class AppModule {}

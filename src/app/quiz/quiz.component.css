@@ -34,7 +34,7 @@ div.scroll-list {
   background-position: 50% 0%;
 }
 .game{
-  padding-top: 14rem;
+  padding-top: 7rem;
 }
 .back-op{
   background-color: rgba(255, 255, 255, 0.65);
@@ -61,4 +61,8 @@ div.scroll-list {
   .drag-game{
     background-position: 71% 0%;
   }
+}
+
+.score, .user {
+  color: #222;
 }
