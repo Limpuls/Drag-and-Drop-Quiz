@@ -1,0 +1,109 @@
+h1{
+    color:#C21B1A;
+    font-weight: bold;
+    font-family: 'Biryani', sans-serif !important;
+}
+.home-background{
+    background-image: url(../../assets/Background-1.png);
+    background-size: cover;
+    min-height: 100vh;
+    padding: 12rem 0;
+}
+.video-home{
+    max-width: 900px;
+    margin-top: 6rem;
+    border-radius: 35px;
+}
+.video-container{
+    width: 100%;
+}
+.video-home video{
+    width: 100%;
+    border-radius: 35px;
+}
+.video-home video[poster]{
+    object-fit: cover;
+}
+.cast-system-section{
+    background-image: url(../../assets/Background-2.jpg);
+    background-size: cover;
+}
+.comic{
+    background-image: url(../../assets/Background-3.png);
+    background-size: cover;
+}
+.comic-magazine{
+    text-align: center !important;
+}
+.comic img{
+    width: 80%;
+}
+.game {
+    background: #24A7C4;
+    overflow: hidden;
+    padding: 0rem 0rem 3rem 0rem;
+}
+.game h1 {
+        color: #ffffff !important;
+        text-align: center;
+        display: block;
+        position: relative;
+        z-index: 2;
+}
+
+.cast-system-section{
+    padding:8rem 0rem;     
+}
+.card{
+    text-align: center;
+}
+.card img{
+   max-width: 100%;
+}
+.cast-system{
+    margin-bottom: 7rem;
+}
+.cast-system img{
+    max-width: 100%;    
+}
+.my-btn{
+    text-align: center;
+    margin: 3rem 0;
+    text-decoration: none;
+}
+.my-btn a{
+    padding:10px 15px!important;
+    border-radius: 5px;
+    margin: 1.5rem 1.5rem 2rem 1.5rem;
+    background-color: #D8C98F !important;
+    color: #ffffff !important;
+  }
+.my-btn a:hover{
+    opacity: 0.9;
+    text-decoration: none;
+}
+.game h1{
+    margin-top: 5rem;
+}
+.game img {
+    max-width: 250px;
+    position: relative;
+    display: block !important;
+    margin-top: -180px;
+    float: right;
+    right: 7rem;
+    z-index: 1;
+}
+@media (max-width: 1200px) {
+    .home-background{
+    min-height: fit-content;
+    padding: 6rem 0rem;
+}
+
+}
+@media (max-width: 576px) {
+    .home-background{
+        padding: 5rem 0rem;
+    }
+  }
+
