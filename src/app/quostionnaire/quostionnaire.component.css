@@ -1,0 +1,24 @@
+.quiz-game{
+  background-image: url(../../assets/Quiz-Background.png);
+  background-size: cover;
+  min-height: calc(100vh - 80px);
+  background-position: 50% 0%;
+}
+
+.card {
+  text-align: center;
+    margin-top: 200px;
+    font-size: 20px;
+}
+
+.btn-primary {
+  margin-top: 20px;
+}
+
+.card-header {
+  padding-bottom: 20px;
+}
+
+input[type=checkbox], input[type=radio] {
+  margin: 7px;
+}

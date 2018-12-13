@@ -15,7 +15,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class AuthService {
   public user: Observable<firebase.User>;
   public userDetails: firebase.User = null;
-  public loggedIn = false;
+  public loggedIn:boolean = false;
 
   constructor(private _firebaseAuth: AngularFireAuth, private router: Router, private db: AngularFireDatabase) {
     this.user = _firebaseAuth.authState;
@@ -58,7 +58,7 @@ export class AuthService {
 
         console.log(value);
 
-
+        this.router.navigate(["/quiz"])
     }).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -95,7 +95,7 @@ console.log(this.db.list("/users").valueChanges());
     logOut() {
       this.loggedIn = false;
       firebase.auth().signOut().then(function() {
-
+         sessionStorage.removeItem('user');
         // Sign-out successful.
         console.log("signout successful");
     }).catch(function(error) {

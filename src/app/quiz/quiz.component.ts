@@ -16,28 +16,38 @@ export class QuizComponent  {
     this.user = _auth.getCurrentUser();
   }
 
-  questions:string[] = ["what is nepal?", "what is nepal2?", "what is nepal3?"];
-  correctAns:string[] = ["Carrot", "Onion", "Potato", "Capsicum"];
-  //answers:string[] = [["vienas", "du"], ["keturi", "10"]];
+  questions:string[] = ["What is the largest district of Nepal?", "What is the most populated district of Nepal?", "Which was the first national park of Nepal?", "How many districts are there in Himalayan region of Nepal?", "Which is the biggest National Park of Nepal?"];
+  correctAns:string[] = ["Dolpa", "Kathmandu", "Chitwan", "Capsicum", "16", "She-Phoksundo"];
+
   i:number = 0;
   score:number = 0;
   indexes:any;
   finished:boolean;
   vegetables = [[
-  {name: 'Carrot', type: 'vegetable'},
-  {name: 'Onion', type: 'vegetable'},
-  {name: 'Potato', type: 'vegetable'},
-  {name: 'Capsicum', type: 'vegetable'}],
+  {name: 'Dulpa', type: 'vegetable'},
+  {name: 'Humla', type: 'vegetable'},
+  {name: 'Manang', type: 'vegetable'},
+  {name: 'Mustang', type: 'vegetable'}],
   [
-  {name: 'Carrotas', type: 'vegetable'},
-  {name: 'Onion', type: 'vegetable'},
-  {name: 'Potatoas', type: 'vegetable'},
-  {name: 'Capsicumas', type: 'vegetable'}],
+  {name: 'Kathmandu', type: 'vegetable'},
+  {name: 'Morang', type: 'vegetable'},
+  {name: 'Bhaktapur', type: 'vegetable'},
+  {name: 'Rupandehi', type: 'vegetable'}],
   [
-  {name: 'Carrotas2', type: 'vegetable'},
-  {name: 'Onionas2', type: 'vegetable'},
-  {name: 'Potatoas2', type: 'vegetable'},
-  {name: 'Capsicumas2', type: 'vegetable'}]]
+  {name: 'Chitwan', type: 'vegetable'},
+  {name: 'Phewa', type: 'vegetable'},
+  {name: 'Illam', type: 'vegetable'},
+  {name: 'Nagarkot', type: 'vegetable'}],
+  [
+  {name: '11', type: 'vegetable'},
+  {name: '12', type: 'vegetable'},
+  {name: '16', type: 'vegetable'},
+  {name: '14', type: 'vegetable'}],
+  [
+  {name: 'Lungtang', type: 'vegetable'},
+  {name: 'She-Phoksundo', type: 'vegetable'},
+  {name: 'Sagartmatha', type: 'vegetable'},
+  {name: 'Chitwan', type: 'vegetable'}]]
 
 
 //hey

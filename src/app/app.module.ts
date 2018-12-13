@@ -22,12 +22,13 @@ import { AuthService } from './services/auth.service';
 import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 import { QuostionnaireComponent } from './quostionnaire/quostionnaire.component';
 import { QuestionnaireService } from './quostionnaire/questionnaire.service';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, NgDragDropModule.forRoot(), CommonModule, ReactiveFormsModule, routing, AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule, AngularFireAuthModule, AngularFireDatabaseModule],
   declarations: [AppComponent, LoginComponent, HomeComponent, NotfoundComponent, QuizComponent, RegisterComponent, ScoreboardComponent, QuostionnaireComponent],
   bootstrap: [AppComponent],
-  providers: [LoginService, AuthService, QuestionnaireService],
+  providers: [LoginService, AuthService, QuestionnaireService, AuthGuard],
   exports: [NgDragDropModule, CommonModule]
 })
 export class AppModule {}
