@@ -11,7 +11,7 @@ import { AuthService } from './services/auth.service';
 export class AppComponent {
 
   title = 'angular-draganddrop';
-  constructor(private auth: AuthService) { }
+  constructor(public auth: AuthService) { }
   LoggedIn() {
       return this.auth.isLoggedIn();
   }

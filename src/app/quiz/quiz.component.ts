@@ -16,38 +16,33 @@ export class QuizComponent  {
     this.user = _auth.getCurrentUser();
   }
 
-  questions:string[] = ["What is the largest district of Nepal?", "What is the most populated district of Nepal?", "Which was the first national park of Nepal?", "How many districts are there in Himalayan region of Nepal?", "Which is the biggest National Park of Nepal?"];
-  correctAns:string[] = ["Dolpa", "Kathmandu", "Chitwan", "Capsicum", "16", "She-Phoksundo"];
+  questions:string[] = ["How many times did Anjalis father fail in class 3?", "Why did Anjali like the time when her father was working in Saudi Arabia?", "How many of Anjali's friends from the village still go to school?", "What does Anjali like to do in her free time?", "Why is Anjali not allowed to visit her friends houses?"];
+  correctAns:string[] = ["3 times", "There was no figthing", "No one", "Dancing", "Her mum is affraid that she will run away", "She-Phoksundo"];
 
   i:number = 0;
   score:number = 0;
   indexes:any;
   finished:boolean;
   vegetables = [[
-  {name: 'Dulpa', type: 'vegetable'},
-  {name: 'Humla', type: 'vegetable'},
-  {name: 'Manang', type: 'vegetable'},
-  {name: 'Mustang', type: 'vegetable'}],
+  {name: '1 time', type: 'vegetable'},
+  {name: '2 times', type: 'vegetable'},
+  {name: '3 times', type: 'vegetable'}],
   [
-  {name: 'Kathmandu', type: 'vegetable'},
-  {name: 'Morang', type: 'vegetable'},
-  {name: 'Bhaktapur', type: 'vegetable'},
-  {name: 'Rupandehi', type: 'vegetable'}],
+  {name: 'He called home every day', type: 'vegetable'},
+  {name: 'There was no figthing', type: 'vegetable'},
+  {name: 'She got better clothes', type: 'vegetable'}],
   [
-  {name: 'Chitwan', type: 'vegetable'},
-  {name: 'Phewa', type: 'vegetable'},
-  {name: 'Illam', type: 'vegetable'},
-  {name: 'Nagarkot', type: 'vegetable'}],
+  {name: 'One other girl', type: 'vegetable'},
+  {name: 'Two other girls', type: 'vegetable'},
+  {name: 'No one', type: 'vegetable'}],
   [
-  {name: '11', type: 'vegetable'},
-  {name: '12', type: 'vegetable'},
-  {name: '16', type: 'vegetable'},
-  {name: '14', type: 'vegetable'}],
+  {name: 'Dancing', type: 'vegetable'},
+  {name: 'Singing', type: 'vegetable'},
+  {name: 'Reading', type: 'vegetable'}],
   [
-  {name: 'Lungtang', type: 'vegetable'},
-  {name: 'She-Phoksundo', type: 'vegetable'},
-  {name: 'Sagartmatha', type: 'vegetable'},
-  {name: 'Chitwan', type: 'vegetable'}]]
+  {name: 'Her mum is affraid that she will run away', type: 'vegetable'},
+  {name: 'The friends do not want her to visit', type: 'vegetable'},
+  {name: 'She doesnt have any friends', type: 'vegetable'}]]
 
 
 //hey
@@ -90,7 +85,7 @@ export class QuizComponent  {
       if(this.questions.length == this.i) {
         console.log("done");
         this.finished = true;
-        this.router.navigate(['/']);
+        this.router.navigate(['/scoreboard']);
       }
 
   }

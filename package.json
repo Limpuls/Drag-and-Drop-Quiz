@@ -24,6 +24,7 @@
     "bootstrap": "^4.1.3",
     "core-js": "^2.6.0",
     "firebase": "^5.7.0",
+    "firebase-tools": "^6.1.2",
     "ng-drag-drop": "^5.0.0",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.3.3",
