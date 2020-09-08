@@ -87,6 +87,7 @@ console.log(this.db.list("/users").valueChanges());
    // Handle Errors here.
    var errorCode = error.code;
    var errorMessage = error.message;
+   console.log(errorCode + " " + errorMessage);
    // ...
  });
 //console.log(this.form.controls['email'].value);
