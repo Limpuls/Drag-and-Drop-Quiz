@@ -28,7 +28,6 @@ div.scroll-list {
   height: 50px;
 }
 .drag-game{
-  background-image: url(../../assets/Quiz-Background.png);
   background-size: cover;
   min-height: calc(100vh - 80px);
   background-position: 50% 0%;
@@ -37,7 +36,7 @@ div.scroll-list {
   padding-top: 7rem;
 }
 .back-op{
-  background-color: rgba(255, 255, 255, 0.65);
+  background-color: #eae2b7;
   border-radius: 50px;
   padding: 3rem;
 }

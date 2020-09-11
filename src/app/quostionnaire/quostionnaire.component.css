@@ -1,5 +1,4 @@
 .quiz-game{
-  background-image: url(../../assets/Quiz-Background.png);
   background-size: cover;
   min-height: calc(100vh - 80px);
   background-position: 50% 0%;

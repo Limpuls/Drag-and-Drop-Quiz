@@ -1,111 +1,53 @@
-<section class="drag-game">
-  <div class="container-fluid">
-    <div class="row">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+      <h3 class="score lead">Score: {{score}}</h3>
+      </div>
       <div class="col-lg-6">
-        <h3 class="score lead">Score: {{score}}</h3>
-        </div>
-        <div class="col-lg-6">
-        <h3 class="user lead">Logged In as: {{user}}</h3>
-        </div>
-        </div>
-        </div>
+      <h3 class="user lead">Logged In as: {{user}}</h3>
+      </div>
+      </div>
+      </div>
 <div class="container game">
 <div class="row">
-  <div class="col-lg-12">
-  </div>
-  </div>
-  <div class="row">
-        <div class="col-lg-5 col-md-4 col-sm-6 back-op">
-                Questions
-                  <div class="card card-outline-primary mb-3" droppable [dragOverClass]="'drag-target-border-green'" [dropScope]="'vegetable'"
-                      [dragHintClass]="'drag-hint'" (onDrop)="onVegetableDrop($event)">
-                      <div class="card-header card-inverse card-primary lead">{{questions[i]}}</div>
-                      <div class="card-block scroll-list">
-                          <li *ngFor="let item of droppedVegetables" class="list-group-item">{{item.name}}</li>
-                      </div>
-                  </div>
-              </div>
-    <div class="col-lg-5 col-md-4 col-sm-6 back-op">
-        <div class="card card-outline-success mb-3">
-            <div class="card-header card-inverse card-success">
-                Answers
-                </div>
-            <div class="card-block scroll-list">
-                <div class="list-group">
-                  <ng-container *ngFor="let item of [vegetables[this.i]]">
-                    <li
-                      *ngFor="let items of item"
-                      class="list-group-item list-group-item-action list-group-item-success"
-                      [draggable]
-                      [dragClass]="'active'"
-                      [dragTransitClass]="'active'"
-                      [dragData]="items"
-                      [dragScope]="items.type"
-                      [dragEnabled]="dragEnabled">
-                      {{items.name}}
-                    </li>
-                  </ng-container>
-                </div>
-            </div>
-
-            <!--<div class="card-footer">
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox" value="" title="Drag Enabled" [(ngModel)]="dragEnabled">
-                  Drag Enabled
-                </label>
-              </div>
-            </div>-->
-        </div>
-
-        <!--<div class="card card-outline-primary mb-3">
-            <div class="card-header card-inverse card-primary">Draggable Items with Handle</div>
-            <div class="card-block scroll-list">
-                <ul class="list-group text-center">
-                    <li draggable *ngFor="let item of fruits" [dragClass]="'drag-over'" [dragData]="item" class="list-group-item justify-content-between list-group-item-action"
-                        [dragScope]="item.type" [dragHandle]="'.drag-bar'">
-                        {{item.name}}
-                        <i #dragHandle class="drag-bar fa fa-bars fa-lg" aria-hidden="true"></i>
-                    </li>
-                </ul>
-            </div>
-        </div>-->
-    </div>
-
-    <!--<div class="col-sm-3">
-        <div class="card card-outline-primary mb-3" droppable [dragOverClass]="'drag-target-border'" [dropScope]="'fruit'" [dragHintClass]="'drag-hint'"
-            (onDrop)="onFruitDrop($event)" [dropEnabled]="fruitDropEnabled">
-            <div class="card-header card-inverse card-primary">
-                Drop Fruits here
-            </div>
-            <div class="card-block scroll-list">
-                <li *ngFor="let item of droppedFruits" class="list-group-item">{{item.name}}</li>
-            </div>
-
-              <div class="card-footer">
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox" value=""  [(ngModel)]="fruitDropEnabled">
-                  Drop Enabled
-                </label>
-              </div>
-            </div>
-
-
-        </div>
-    </div>-->
-
-<!--
-    <div class="col-sm-3">
-        <div class="card card-outline-primary mb-3" droppable [dragOverClass]="'drag-target-border'" [dropScope]="['fruit', 'vegetable']"
-            [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event)">
-            <div class="card-header card-inverse card-primary">Drop Anything here</div>
-            <div class="card-block scroll-list">
-                <li *ngFor="let item of droppedItems" class="list-group-item">{{item.name}}</li>
-            </div>
-        </div>
-    </div>
--->
+<div class="col-lg-12">
 </div>
 </div>
-</section>
+<div class="row">
+      <div class="col-lg-5 col-md-4 col-sm-6 back-op">
+              Questions
+                <div class="card card-outline-primary mb-3" droppable [dragOverClass]="'drag-target-border-green'" [dropScope]="'vegetable'"
+                    [dragHintClass]="'drag-hint'" (onDrop)="onVegetableDrop($event)">
+                    <div class="card-header card-inverse card-primary lead">{{questions[i]}}</div>
+                    <div class="card-block scroll-list">
+                        <li *ngFor="let item of droppedVegetables" class="list-group-item">{{item.name}}</li>
+                    </div>
+                </div>
+            </div>
+  <div class="col-lg-5 col-md-4 col-sm-6 back-op">
+      <div class="card card-outline-success mb-3">
+          <div class="card-header card-inverse card-success">
+              Answers
+              </div>
+          <div class="card-block scroll-list">
+              <div class="list-group">
+                <ng-container *ngFor="let item of [vegetables[this.i]]">
+                  <li
+                    *ngFor="let items of item"
+                    class="list-group-item list-group-item-action list-group-item-success"
+                    [draggable]
+                    [dragClass]="'active'"
+                    [dragTransitClass]="'active'"
+                    [dragData]="items"
+                    [dragScope]="items.type"
+                    [dragEnabled]="dragEnabled">
+                    {{items.name}}
+                  </li>
+                </ng-container>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
